@@ -14,7 +14,7 @@
 - <code>source .venv/bin/activate</code><br>
 - <code>pip install -r requirements.txt</code><br>
 - Edit template.env and rename to .env<br>
-- Run <code>db_utils/reinit_db.sql</code> into PostgreSQL CLI<br>\
+- Run <code>db_utils/reinit_db.sql</code> into PostgreSQL CLI<br>
 - Edit ssbot.service<br>
 - <code>ln -s /../bot.service /etc/systemd/system</code><br>
 - <code>systemctl enable ssbot.service</code><br>
