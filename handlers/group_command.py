@@ -143,9 +143,9 @@ async def send(message: Message, db: asyncpg.pool.Pool, isgroup: bool):
         for row in res:
             try:
                 await bot.send_message(row['from_userid']
-                                       , f'Приветствую, {row['from_username']}!'
-                                         f'\nВ чате "{row['chat_title']}" Вам выпала честь одарить подарком:'
-                                         f'\n{row['to_first_name']} {row['to_last_name']} - {row['to_username']}')
+                                       , f"Приветствую, {row['from_username']}!"
+                                         f"\nВ чате «{row['chat_title']}» Вам выпала честь одарить подарком:"
+                                         f"\n{row['to_first_name']} {row['to_last_name']} - {row['to_username']}")
             except Exception as e:
                 logger.error(f'send(): {e}')
         answer = 'Рассылка отправлена'
